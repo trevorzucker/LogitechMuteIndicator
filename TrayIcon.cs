@@ -8,8 +8,14 @@ public class TrayIcon : IDisposable
     private ToolStripMenuItem? audioDeviceSubMenu;
     private readonly SynchronizationContext syncContext;
 
-    private readonly static Icon muteIcon = new Icon("icon/tray_on.ico");
-    private readonly static Icon unmuteIcon = new Icon("icon/tray_off.ico");
+    private static readonly Icon muteIcon = LoadIconFromResource("LogitechMuteIndicator.icon.tray_on.ico");
+    private static readonly Icon unmuteIcon = LoadIconFromResource("LogitechMuteIndicator.icon.tray_off.ico");
+
+    private static Icon LoadIconFromResource(string resourceName)
+    {
+        using Stream stream = typeof(Program).Assembly.GetManifestResourceStream(resourceName)!;
+        return new Icon(stream);
+    }
 
     public TrayIcon(string tooltip, SynchronizationContext syncContext)
     {

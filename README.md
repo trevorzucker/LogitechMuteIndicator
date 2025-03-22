@@ -42,4 +42,4 @@ A lightweight C# system tray application that monitors your selected microphone 
 
 3. **Optional: Compile For End Users (No .NET install required)**
 
-   ```dotnet publish -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true```
+   ```dotnet publish -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true```
