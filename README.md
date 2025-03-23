@@ -31,15 +31,21 @@ A lightweight C# system tray application that monitors your selected microphone 
 
 1. **Clone the repository**
 
-   ```bash
+   ```
+   bash
    git clone https://github.com/trevorzucker/LogitechMuteIndicator.git
-   cd LogitechMuteIndicator```
+   cd LogitechMuteIndicator
+   ```
 
 2. **Build the app**
 
-   ```dotnet build
-   dotnet run```
+   ```
+   dotnet build
+   dotnet run
+   ```
 
 3. **Optional: Compile For End Users (No .NET install required)**
 
-   ```dotnet publish -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true```
+   ```
+   dotnet publish -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true
+   ```
