@@ -11,13 +11,6 @@ internal static class Program
 
     [STAThread]
     public static void Main() {
-        if (!LogitechGSDK.LogiLedInit())
-        {
-            Console.WriteLine("Failed to initialize Logitech LED SDK.");
-            return;
-        }
-        LogitechGSDK.LogiLedShutdown();
-
         Application.EnableVisualStyles();
         Application.SetCompatibleTextRenderingDefault(false);
 
